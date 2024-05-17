@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+    /* CSS styles for the quiz */
+    .quiz-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .options {
+      margin-bottom: 20px;
+    }
+    
+    .option {
+      margin-bottom: 10px;
+    }
+    
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div class="question">Question 1: What is the capital of France?</div>
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q1" value="a">
+        <label for="q1a">a) Paris</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q1" value="b">
+        <label for="q1b">b) London</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q1" value="c">
+        <label for="q1c">c) Rome</label>
+      </div>
+    </div>
+    <div class="question">Question 2: What is the largest planet in our solar system?</div>
+    <div class="options">
+      <div class="option">
+        <input type="radio" name="q2" value="a">
+        <label for="q2a">a) Jupiter</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q2" value="b">
+        <label for="q2b">b) Earth</label>
+      </div>
+      <div class="option">
+        <input type="radio" name="q2" value="c">
+        <label for="q2c">c) Mars</label>
+      </div>
+    </div>
+    <button class="submit-btn">Submit</button>
+    <div class="result"></div>
+  </div>
+
+  <script>
+    // JavaScript code for quiz result display
+    const submitBtn = document.querySelector('.submit-btn');
+    const resultDiv = document.querySelector('.result');
+    
+    submitBtn.addEventListener('click', () => {
+      const q1Answer = document.querySelector('input[name="q1"]:checked').value;
+      const q2Answer = document.querySelector('input[name="q2"]:checked').value;
+      
+      let score = 0;
+      
+      if (q1Answer === 'a') {
+        score++;
+      }
+      
+      if (q2Answer === 'a') {
+        score++;
+      }
+      
+      resultDiv.textContent = `Your score: ${score}/2`;
+    });
+  </script>
+</body>
+</html>

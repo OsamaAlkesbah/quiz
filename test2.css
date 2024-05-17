@@ -1,0 +1,40 @@
+.f_page{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: gray;
+	margin-top: auto;
+	padding: 370px;
+}
+
+.ddd{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+background-color: gray; 
+padding: 370px;
+margin-top: auto;
+
+
+}
+  .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+
+
+    }
+    .options {
+      margin-bottom: 20px;
+    }
+    
+    .option {
+      margin-bottom: 10px;
+    
